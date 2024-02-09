@@ -1,6 +1,7 @@
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        
     // Obtener los valores del formulario
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
