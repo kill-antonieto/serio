@@ -1,11 +1,11 @@
 <?php
-// Simulación de credenciales válidas
+// Credenciales válidas
 $correctUsername = "admin";
 $correctPassword = "planeta123";
 
 // Recuperar datos del formulario
-$username = $_POST['username'];
-$password = $_POST['password'];
+$username = isset($_POST['username']) ? $_POST['username'] : '';
+$password = isset($_POST['password']) ? $_POST['password'] : '';
 
 // Verificar las credenciales
 if ($username === $correctUsername && $password === $correctPassword) {
