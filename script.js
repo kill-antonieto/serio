@@ -8,7 +8,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     // Realizar una llamada AJAX para verificar las credenciales en el servidor
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
+        if (xhr.readyState === 4) {
             // La respuesta del servidor
             var response = JSON.parse(xhr.responseText);
 
@@ -20,7 +20,12 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
                     window.location.href = "https://b24-rul45g.bitrix24.site/";
                 }, 2000);
             } else {
-                alert("Credenciales incorrectas. Inténtalo nuevamente.");
+                alert("Credenciales incorrectas. Redirigiendo a página de error.");
+                
+                // Redirigir a la página de error después de 2 segundos (puedes ajustar este tiempo)
+                setTimeout(function() {
+                    window.location.href = "https://b24-rul45g.bitrix24.site/emptypage_lkqi/";
+                }, 2000);
             }
         }
     };
