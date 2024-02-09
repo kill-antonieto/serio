@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Redirigir inmediatamente cuando las credenciales son correctas
             window.location.href = "https://b24-rul45g.bitrix24.site/";
         } else {
-            alert("Credenciales incorrectas. Redirigiendo a página de error.");
+            ;
 
             // Redirigir a la página de error después de 2 segundos (puedes ajustar este tiempo)
             setTimeout(function() {
