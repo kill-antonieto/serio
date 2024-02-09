@@ -1,12 +1,20 @@
 <?php
-// Aquí deberías agregar la lógica de autenticación real, consultar la base de datos, etc.
+// Simulación de credenciales válidas
+$correctUsername = "admin";
+$correctPassword = "planeta123";
+
+// Recuperar datos del formulario
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-// Ejemplo básico: usuario=admin, contraseña=password
-if ($username === 'admin' && $password === 'password') {
-    echo 'Inicio de sesión exitoso';
+// Verificar las credenciales
+if ($username === $correctUsername && $password === $correctPassword) {
+    $response = array('success' => true);
 } else {
-    echo 'Error de inicio de sesión';
+    $response = array('success' => false);
 }
+
+// Devolver la respuesta en formato JSON
+header('Content-Type: application/json');
+echo json_encode($response);
 ?>
